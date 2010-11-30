@@ -1,0 +1,113 @@
+@import reset
+@import monochrome
+@import mixins
+@import forms
+
+$width: 960px
+$cols: 12
+$divs: 8
+@import grid
+
+$txt: #1b1b1b
+$link: rgb(0,160,220)
+$hover: rgb(0,160,220)
+
+$m: 13px
+body
+  font-size: $m
+  line-height: 1.5
+  font-family: $sans
+  color: $txt
+  background: #fff
+
+a
+  color: $link
+  text-decoration: none
+  &:hover, &:focus
+    color: $hover
+
+=clear
+  &:after
+    content: ""
+    display: block
+    clear: both
+
+header
+  height: 6em
+  nav
+    @extend .cnt
+    padding: 1em 0 0
+
+#content
+  @extend .cnt
+
+  dl.funnels
+
+    dt.funnel.title
+      font: bold 1.5em/2 $sans
+
+    dd.funnel.data
+      border-top: 1px solid #ddd
+      border-bottom: 1px solid #ddd
+      background: $m245
+      +bg-linear-gradient($m250,$m240)
+      margin: 0 0 2em
+      +border-radius
+      +clear
+      ul.steps
+        li.step
+          +col($s4 - 1px)
+          padding: .75em 0
+          border-left: 1px solid #ddd
+          height: 100%
+          &.one
+          &.one, &.two
+            position: relative
+            &:after
+              display: block
+              position: absolute
+              z-index: 2
+              top: 20px
+              right: -10px
+              content: ">"
+              color: #ccc
+              font-weight: bold
+              line-height: 1em
+              text-align: center
+              height: 16px
+              width: 16px
+              border: 2px solid #ddd
+              background: #fff
+              +border-radius(9px)
+          &.three
+            +col($s4 - 2px)
+            border-right: 1px solid #ddd
+
+          .content
+            +col($s5/2 - 1px - $m)
+            padding-left: 1em
+
+            p
+              &.label
+                font: bold 10px/1.5 $sans
+                color: #aaa
+                text-transform: uppercase
+                letter-spacing: 1px
+
+          p.conversion-rate
+            font: 3em/1 $sans
+            float: right
+            margin-right: $m
+            text-shadow: #fff 0 1px 0
+            &.low
+              color: #f30
+            &.med
+              color: #fa0
+            &.high
+              color: #0e6
+            &:after
+              content: "%"
+              color: #aaa
+              font: bold .5em/1.5 $sans
+
+
