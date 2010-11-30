@@ -46,101 +46,6 @@ strong {
 em {
   font-style: italic; }
 
-select, label {
-  background: rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.1)));
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)); }
-
-select, label.dollar + input {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-right-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.2);
-  border-left-color: rgba(0, 0, 0, 0.15); }
-
-select, label, label.dollar + input {
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px; }
-
-select {
-  width: 198px;
-  font: 14px/24px Arial;
-  color: white; }
-  select option {
-    color: white;
-    background: #444444; }
-
-label.dollar {
-  display: block;
-  width: 178px;
-  padding: 0 10px;
-  font: 24px/48px Arial;
-  transition: all 0.15s ease;
-  -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease; }
-label.focus {
-  color: #666666; }
-label.has-text {
-  color: transparent;
-  -webkit-transition-duration: 0s;
-  -moz-transition-duration: 0s;
-  -o-transition-duration: 0s; }
-label.dollar + .input {
-  display: block;
-  margin-top: -48px;
-  width: 163px;
-  height: 36px;
-  padding: 5px 9px 5px 24px;
-  font: bold 36px/1 Arial;
-  color: lime;
-  text-align: right;
-  text-shadow: black 0 1px 0;
-  background: transparent;
-  transition: all 0.15s ease;
-  -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease; }
-  label.dollar + .input:focus {
-    box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 3px; }
-
-li.submit button {
-  display: block;
-  width: 172px;
-  padding: 3px;
-  margin: 18px auto 0;
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  border-radius: 22px;
-  -webkit-border-radius: 22px;
-  -moz-border-radius: 22px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 3;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 3;
-  transition: all 0.15s ease;
-  -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease;
-  cursor: pointer; }
-  li.submit button span {
-    display: block;
-    margin: 0 -1px;
-    font: bold 18px/36px Arial;
-    color: white;
-    text-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
-    background: #64c8ff;
-    background: -webkit-gradient(linear, left top, left bottom, from(#64c8ff), to(#00324b));
-    background: -moz-linear-gradient(#64c8ff, #00324b);
-    border-radius: 18px;
-    -webkit-border-radius: 18px;
-    -moz-border-radius: 18px; }
-  li.submit button:active span {
-    background: #00324b;
-    background: -webkit-gradient(linear, left top, left bottom, from(#00324b), to(#64c8ff));
-    background: -moz-linear-gradient(#00324b, #64c8ff); }
-
 /*
  * $width: 960px
  *
@@ -179,10 +84,12 @@ a {
     background: #fafafa;
     background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f0f0f0));
     background: -moz-linear-gradient(#fafafa, #f0f0f0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#f0f0f0')";
+    *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#f0f0f0');
     margin: 0 0 2em;
-    border-radius: 5px;
+    -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    -moz-border-radius: 5px; }
+    border-radius: 5px; }
     #content dl.funnels dd.funnel.data:after {
       content: "";
       display: block;
@@ -194,9 +101,9 @@ a {
       border-left: 1px solid #dddddd;
       height: 100%; }
       #content dl.funnels dd.funnel.data ul.steps li.step.one {
-        border-radius: 4px 0 0 4px;
+        -moz-border-radius: 4px 0 0 4px;
         -webkit-border-radius: 4px 0 0 4px;
-        -moz-border-radius: 4px 0 0 4px; }
+        border-radius: 4px 0 0 4px; }
       #content dl.funnels dd.funnel.data ul.steps li.step.one, #content dl.funnels dd.funnel.data ul.steps li.step.two {
         position: relative; }
         #content dl.funnels dd.funnel.data ul.steps li.step.one:after, #content dl.funnels dd.funnel.data ul.steps li.step.two:after {
@@ -214,16 +121,16 @@ a {
           width: 16px;
           border: 2px solid #dddddd;
           background: white;
-          border-radius: 9px;
+          -moz-border-radius: 9px;
           -webkit-border-radius: 9px;
-          -moz-border-radius: 9px; }
+          border-radius: 9px; }
       #content dl.funnels dd.funnel.data ul.steps li.step.three {
         width: 318px;
         float: left;
         border-right: 1px solid #dddddd;
-        border-radius: 0 4px 4px 0;
+        -moz-border-radius: 0 4px 4px 0;
         -webkit-border-radius: 0 4px 4px 0;
-        -moz-border-radius: 0 4px 4px 0; }
+        border-radius: 0 4px 4px 0; }
       #content dl.funnels dd.funnel.data ul.steps li.step .content {
         width: 186px;
         float: left;

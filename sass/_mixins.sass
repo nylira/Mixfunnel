@@ -1,98 +1,79 @@
 // fonts
 $serif: Cambria, Georgia, serif
-$sans: "Helvetica Neue", Arial, Helvetica, sans-serif
 $mono: Consolas, "Lucida Console", Courier New, monospace
+$sans: "Helvetica Neue", Arial, Helvetica, sans-serif
+$lucida: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif
 
 // text stroke
 =text-stroke($w: 0.1px, $c: transparent)
   -webkit-text-stroke: $w $c
   
 //----------------------------------------------------------------------
+  Backgrounds
 
-  Gradients
+=bg($color: #fff)
+  background: $color
   
-  ----------------------------------------------------------------------
-  
-// simple linear gradient
 =bg-linear-gradient($a: white, $b: black)
   background: $a
   background: -webkit-gradient(linear, left top, left bottom, from($a), to($b))
   background: -moz-linear-gradient($a, $b)
-
+  -ms-filter = "\"progid:DXImageTransform.Microsoft.gradient(startColorStr='#{!a}', EndColorStr='#{!b}')\""
+  *filter = "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{!a}', EndColorStr='#{!b}')"
   
-// simple radial gradient
 =bg-radial-gradient($x: center, $y: 200, $r: 1000, $a: white, $b: black)
   background: $a
   background: -webkit-gradient(radial, $x $y, 0, $x $y, $r, from($a), to($b))
   background: -moz-radial-gradient($x $y+px, circle, $a, $b)
 
+=bg-glow($a: $w20, $r: 800, $b: $m240, $c: $m230)
+  background: -webkit-gradient(radial, center top, 0, center top, $r, from($a), to(transparent)), -webkit-gradient(linear, left top, left bottom, from($b), to($c))
 //----------------------------------------------------------------------
   Borders
-  ----------------------------------------------------------------------
   
-// complex borders
 =complex-border($t: $w30, $r: $b15, $b: $b30, $l: $w15)
-  border: 1px solid $t
-  border-right-color: $r
-  border-bottom-color: $b
-  border-left-color: $l
+  border-top: 1px solid $t
+  border-right: 1px solid $r
+  border-bottom: 1px solid $b
+  border-left: 1px solid $l
   
-// border radius
 =border-radius($r: 5px)
-  border-radius: $r
-  -webkit-border-radius: $r
   -moz-border-radius: $r
-  
-=border-top-radius($r: 5px)
-  border-top-left-radius: $r
-  border-top-right-radius: $r
-  -webkit-border-top-left-radius: $r
-  -webkit-border-top-right-radius: $r
-  -moz-border-radius-topleft: $r
-  -moz-border-radius-topright: $r
-  
-=border-right-radius($r: 5px)
-  border-top-right-radius: $r
-  border-bottom-right-radius: $r
-  -webkit-border-top-right-radius: $r
-  -webkit-border-bottom-right-radius: $r
-  -moz-border-radius-topright: $r
-  -moz-border-radius-bottomright: $r
-  
-=border-bottom-radius($r: 5px)
-  border-bottom-left-radius: $r
-  border-bottom-right-radius: $r
-  -webkit-border-bottom-left-radius: $r
-  -webkit-border-bottom-right-radius: $r
-  -moz-border-radius-bottomleft: $r
-  -moz-border-radius-bottomright: $r
-  
-=border-left-radius($r: 5px)
-  border-top-left-radius: $r
-  border-bottom-left-radius: $r
-  -webkit-border-top-left-radius: $r
-  -webkit-border-bottom-left-radius: $r
-  -moz-border-radius-topleft: $r
-  -moz-border-radius-bottomleft: $r
-  
-//----------------------------------------------------------------------
-  Box Shadows
-  ----------------------------------------------------------------------
-  
-=box-shadow($c: hsla(0,0%,0%,.3), $x: 0, $y: 0, $s: 3)
-  box-shadow: $c $x $y $s
-  -webkit-box-shadow: $c $x $y $s
-  -moz-box-shadow: $c $x $y $s
-  
+  -webkit-border-radius: $r
+  border-radius: $r
+
+=box-shadow($shadow-1: $b20 0 1px 2px, $shadow-2: false, $shadow-3: false, $shadow-4: false, $shadow-5: false, $shadow-6: false, $shadow-7: false, $shadow-8: false, $shadow-9: false)
+  $full: $shadow-1
+  @if $shadow-2
+    $full: $full + "," + $shadow-2
+  @if $shadow-3
+    $full: $full + "," + $shadow-3
+  @if $shadow-4
+    $full: $full + "," + $shadow-4
+  @if $shadow-5
+    $full: $full + "," + $shadow-5
+  @if $shadow-6
+    $full: $full + "," + $shadow-6
+  @if $shadow-7
+    $full: $full + "," + $shadow-7
+  @if $shadow-8
+    $full: $full + "," + $shadow-8
+  @if $shadow-9
+    $full: $full + "," + $shadow-9
+    
+  -moz-box-shadow: $full
+  -webkit-box-shadow: $full
+  -o-box-shadow: $full
+  box-shadow: $full
+
 //----------------------------------------------------------------------
   Transitions
-  ----------------------------------------------------------------------
   
-=transition($p: all, $d: .15s, $t: ease)
-  transition: $p $d $t
-  -webkit-transition: $p $d $t
-  -moz-transition: $p $d $t
-  -o-transition: $p $d $t
+=transition($t: all .15s ease)
+  transition: $t
+  -webkit-transition: $t
+  -moz-transition: $t
+  -o-transition: $t
   
 =transition-duration($d: 0s)
   -webkit-transition-duration: $d
