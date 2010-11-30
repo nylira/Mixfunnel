@@ -32,14 +32,10 @@ a
     display: block
     clear: both
 
-header
-  height: 6em
-  nav
-    @extend .cnt
-    padding: 1em 0 0
 
 #content
   @extend .cnt
+  padding: 6em 0
 
   dl.funnels
 
@@ -61,6 +57,7 @@ header
           border-left: 1px solid #ddd
           height: 100%
           &.one
+            +border-radius(4px 0 0 4px)
           &.one, &.two
             position: relative
             &:after
@@ -82,6 +79,7 @@ header
           &.three
             +col($s4 - 2px)
             border-right: 1px solid #ddd
+            +border-radius(0 4px 4px 0)
 
           .content
             +col($s5/2 - 1px - $m)

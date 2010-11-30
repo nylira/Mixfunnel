@@ -147,10 +147,10 @@ li.submit button {
  * $cols: 6
  *
  * $divs: 8 */
-.cnt, header nav, #content {
+.cnt, #content {
   width: 960px;
   margin: 0 auto; }
-  .cnt:after, header nav:after, #content:after {
+  .cnt:after, #content:after {
     clear: both;
     display: block;
     content: "\0020"; }
@@ -168,79 +168,83 @@ a {
   a:hover, a:focus {
     color: #00a0dc; }
 
-header {
-  height: 6em; }
-  header nav {
-    padding: 1em 0 0; }
-
-#content dl.funnels dt.funnel.title {
-  font: bold 1.5em/2 "Helvetica Neue", Arial, Helvetica, sans-serif; }
-#content dl.funnels dd.funnel.data {
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  background: #f5f5f5;
-  background: #fafafa;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f0f0f0));
-  background: -moz-linear-gradient(#fafafa, #f0f0f0);
-  margin: 0 0 2em;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px; }
-  #content dl.funnels dd.funnel.data:after {
-    content: "";
-    display: block;
-    clear: both; }
-  #content dl.funnels dd.funnel.data ul.steps li.step {
-    width: 319px;
-    float: left;
-    padding: 0.75em 0;
-    border-left: 1px solid #dddddd;
-    height: 100%; }
-    #content dl.funnels dd.funnel.data ul.steps li.step.one, #content dl.funnels dd.funnel.data ul.steps li.step.two {
-      position: relative; }
-      #content dl.funnels dd.funnel.data ul.steps li.step.one:after, #content dl.funnels dd.funnel.data ul.steps li.step.two:after {
-        display: block;
-        position: absolute;
-        z-index: 2;
-        top: 20px;
-        right: -10px;
-        content: ">";
-        color: #cccccc;
-        font-weight: bold;
-        line-height: 1em;
-        text-align: center;
-        height: 16px;
-        width: 16px;
-        border: 2px solid #dddddd;
-        background: white;
-        border-radius: 9px;
-        -webkit-border-radius: 9px;
-        -moz-border-radius: 9px; }
-    #content dl.funnels dd.funnel.data ul.steps li.step.three {
-      width: 318px;
+#content {
+  padding: 6em 0; }
+  #content dl.funnels dt.funnel.title {
+    font: bold 1.5em/2 "Helvetica Neue", Arial, Helvetica, sans-serif; }
+  #content dl.funnels dd.funnel.data {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    background: #f5f5f5;
+    background: #fafafa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f0f0f0));
+    background: -moz-linear-gradient(#fafafa, #f0f0f0);
+    margin: 0 0 2em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; }
+    #content dl.funnels dd.funnel.data:after {
+      content: "";
+      display: block;
+      clear: both; }
+    #content dl.funnels dd.funnel.data ul.steps li.step {
+      width: 319px;
       float: left;
-      border-right: 1px solid #dddddd; }
-    #content dl.funnels dd.funnel.data ul.steps li.step .content {
-      width: 186px;
-      float: left;
-      padding-left: 1em; }
-      #content dl.funnels dd.funnel.data ul.steps li.step .content p.label {
-        font: bold 10px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
-        color: #aaaaaa;
-        text-transform: uppercase;
-        letter-spacing: 1px; }
-    #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate {
-      font: 3em/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
-      float: right;
-      margin-right: 13px;
-      text-shadow: white 0 1px 0; }
-      #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate.low {
-        color: #ff3300; }
-      #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate.med {
-        color: #ffaa00; }
-      #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate.high {
-        color: #00ee66; }
-      #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate:after {
-        content: "%";
-        color: #aaaaaa;
-        font: bold 0.5em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif; }
+      padding: 0.75em 0;
+      border-left: 1px solid #dddddd;
+      height: 100%; }
+      #content dl.funnels dd.funnel.data ul.steps li.step.one {
+        border-radius: 4px 0 0 4px;
+        -webkit-border-radius: 4px 0 0 4px;
+        -moz-border-radius: 4px 0 0 4px; }
+      #content dl.funnels dd.funnel.data ul.steps li.step.one, #content dl.funnels dd.funnel.data ul.steps li.step.two {
+        position: relative; }
+        #content dl.funnels dd.funnel.data ul.steps li.step.one:after, #content dl.funnels dd.funnel.data ul.steps li.step.two:after {
+          display: block;
+          position: absolute;
+          z-index: 2;
+          top: 20px;
+          right: -10px;
+          content: ">";
+          color: #cccccc;
+          font-weight: bold;
+          line-height: 1em;
+          text-align: center;
+          height: 16px;
+          width: 16px;
+          border: 2px solid #dddddd;
+          background: white;
+          border-radius: 9px;
+          -webkit-border-radius: 9px;
+          -moz-border-radius: 9px; }
+      #content dl.funnels dd.funnel.data ul.steps li.step.three {
+        width: 318px;
+        float: left;
+        border-right: 1px solid #dddddd;
+        border-radius: 0 4px 4px 0;
+        -webkit-border-radius: 0 4px 4px 0;
+        -moz-border-radius: 0 4px 4px 0; }
+      #content dl.funnels dd.funnel.data ul.steps li.step .content {
+        width: 186px;
+        float: left;
+        padding-left: 1em; }
+        #content dl.funnels dd.funnel.data ul.steps li.step .content p.label {
+          font: bold 10px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+          color: #aaaaaa;
+          text-transform: uppercase;
+          letter-spacing: 1px; }
+      #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate {
+        font: 3em/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
+        float: right;
+        margin-right: 13px;
+        text-shadow: white 0 1px 0; }
+        #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate.low {
+          color: #ff3300; }
+        #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate.med {
+          color: #ffaa00; }
+        #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate.high {
+          color: #00ee66; }
+        #content dl.funnels dd.funnel.data ul.steps li.step p.conversion-rate:after {
+          content: "%";
+          color: #aaaaaa;
+          font: bold 0.5em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif; }
